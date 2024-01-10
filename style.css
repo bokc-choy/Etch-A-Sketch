@@ -15,9 +15,21 @@ div{
 }
 
 .row{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    outline: auto;
+    gap: 10px;
 }
 
 .column{
+    background-color: grey;
+    width: 30px;
+    height: 30px;
+    outline: auto;
+}
 
+.grid{
+    
 }
