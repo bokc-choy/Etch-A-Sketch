@@ -20,7 +20,18 @@ function createGrid(size){
     }
 }
 
+function removeGrid(){
+    let child = gridContainer.lastElementChild;
+    while(child){
+        gridContainer.removeChild(child);
+        child = gridContainer.lastElementChild;
+
+    }
+
+}
+
 resizebtn.addEventListener('click', function(){
+    removeGrid();
     let size = prompt('enter size')
     createGrid(size);
 })
