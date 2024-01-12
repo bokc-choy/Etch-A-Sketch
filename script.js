@@ -8,6 +8,8 @@ function createGrid(size){
         for(let j = 0; j < size; j++){
             const subGrid = document.createElement("div");
             subGrid.className = "column";
+            subGrid.style.width = (1/size)*300 + 'px';
+            subGrid.style.height = (1/size)*300 + 'px';
             subGrid.addEventListener('mouseover', function(){
                 subGrid.style.backgroundColor = "red";
             })

@@ -6,27 +6,48 @@ div{
 
 }
 
+.content{
+    display: flex;
+    justify-content: center;
+}
+
 .gridContainer{
     display: flex;
     justify-content: center;
-    
+    max-width: 300px;
+    width: 300px;
+     
     outline: auto;
 }
 
 .row{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
-
+    justify-content: center;
 }
 
 .column{
     background-color: grey;
-    width: 30px;
-    height: 30px;
+    
 }
 
 .grid{
     
+}
+
+.leftContent{
+    width: 300px;
+    height: 300px;
+    
+    outline: auto;
+    flex-shrink: 0;
+}
+
+.rightContent{
+    width: 300px;
+    height: 300px;
+    
+    
+    outline: auto;
+    flex-shrink: 0;
 }
