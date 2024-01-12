@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector(".gridContainer");
-const resizebtn = document.querySelector(".resizebtn")
+const resizebtn = document.querySelector(".resizebtn");
 
 function createGrid(size){
     for(let i = 0; i < size; i++){
@@ -8,13 +8,11 @@ function createGrid(size){
         for(let j = 0; j < size; j++){
             const subGrid = document.createElement("div");
             subGrid.className = "column";
-            subGrid.style.width = (1/size)*300 + 'px';
-            subGrid.style.height = (1/size)*300 + 'px';
+            subGrid.style.width = (1/size)*650 + 'px';
+            subGrid.style.height = (1/size)*650 + 'px';
+            subGrid.style.borderWidth = (1/size)*2 + 'px';
             subGrid.addEventListener('mouseover', function(){
-                subGrid.style.backgroundColor = "red";
-            })
-            subGrid.addEventListener('mouseout', function(){
-                subGrid.style.backgroundColor = "grey";
+                subGrid.style.backgroundColor = "black";
             })
             grid.append(subGrid);
         }
@@ -34,8 +32,13 @@ function removeGrid(){
 
 resizebtn.addEventListener('click', function(){
     removeGrid();
-    let size = prompt('enter size')
+    let size = prompt('enter grid size (max 100)')
+    if(size >= 100){
+
+    }
+    else{
     createGrid(size);
+    }
 })
 
 
