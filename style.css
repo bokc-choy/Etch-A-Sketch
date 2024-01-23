@@ -1,27 +1,24 @@
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 30px;
     gap: 10px;
-    background-color: rgb(255, 225, 125);
+    background-color: rgb(75, 75, 75);
 }
 
-.resizebtn{
+.resizebtn, 
+.clearbtn{
     font-size: 18px;
-    background-color: rgb(44, 239, 87);
+    background-color: rgb(117, 117, 117);
+    color: white;
+    border-radius: 6px;
     width: 100px;
     height: 50px;
-    
-}
-
-div{
-
+    margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .content{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 30px;
 }
 
 .gridContainer{
@@ -29,8 +26,6 @@ div{
     justify-content: center;
     max-width: 650px;
     width: 650px;
-     
-    outline: auto;
 }
 
 .row{
@@ -45,13 +40,17 @@ div{
 }
 
 .leftContent{
-
-    outline: auto;
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    margin: 30px;
 }
 
 .rightContent{
-  
-    outline: auto;
-    flex-shrink: 0;
+    padding: 30px;
+    margin: 30px;
+    width: 100px;
+    height: 50px;
 }
