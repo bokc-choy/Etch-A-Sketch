@@ -3,12 +3,25 @@ body{
     background-color: rgb(75, 75, 75);
 }
 
-.resizebtn, 
-.clearbtn{
+p{
+    font-size: 60px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    color: rgb(225, 225, 225);
+    text-align: center;
+}
+
+button{
     font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
     background-color: rgb(117, 117, 117);
-    color: white;
+    color: rgb(241, 241, 241);
+    border-width: 3px;
     border-radius: 6px;
+    border-color: rgb(225, 225, 225);
     width: 100px;
     height: 50px;
     margin-bottom: 16px;
@@ -18,7 +31,7 @@ body{
 .content{
     display: flex;
     justify-content: space-evenly;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .gridContainer{
@@ -44,6 +57,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 8px;
     padding: 30px;
     margin: 30px;
 }

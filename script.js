@@ -1,7 +1,23 @@
 const gridContainer = document.querySelector(".gridContainer");
 const resizebtn = document.querySelector(".resizebtn");
 const clearbtn = document.querySelector(".clearbtn");
+const erasebtn = document.querySelector(".erasebtn");
 let size;
+let color = "black";
+
+erasebtn.addEventListener('click', erase);
+
+function erase(){
+    console.log("erase");
+    if(color == "black"){
+        color = "white";
+        erasebtn.style.backgroundColor = "red";
+    }
+    else{
+        color = "black";
+        erasebtn.style.backgroundColor = "rgb(117, 117, 117)";
+    }
+}
 
 let mouseDown = false;
 document.addEventListener('mousedown', function(){mouseDown = true;
@@ -21,12 +37,12 @@ function createGrid(size){
             subGrid.style.borderWidth = (1/size)*2 + 'px';
             subGrid.addEventListener('mousedown', function(){
                     console.log("color");
-                    subGrid.style.backgroundColor = "black";
+                    subGrid.style.backgroundColor = color;
             });
             subGrid.addEventListener('mouseover', function(){
                 if(mouseDown == true){
                     console.log("color");
-                    subGrid.style.backgroundColor = "black";
+                    subGrid.style.backgroundColor = color;
                 }
             });
             grid.append(subGrid);
